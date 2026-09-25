@@ -392,7 +392,7 @@ export default function App() {
             transition={{ duration: 0.2 }}
             className="md:hidden fixed top-20 left-0 w-full bg-[#09070a] border-b border-white/[0.05] z-30 shadow-2xl"
           >
-            <div className="px-6 py-6 flex flex-col gap-4 text-[11px] font-mono uppercase tracking-[0.2em] text-stone-300">
+            <div className="px-6 py-6 flex flex-col gap-4 text-xs font-semibold font-mono uppercase tracking-[0.2em] text-stone-300">
               <a href="#about" onClick={(e) => { setMobileMenuOpen(false); handleScrollTo(e, "about"); }} className="hover:text-[#C5A85C] py-1 border-b border-white/[0.02]">Our Story</a>
               <a href="#menu" onClick={(e) => { setMobileMenuOpen(false); handleScrollTo(e, "menu"); }} className="hover:text-[#C5A85C] py-1 border-b border-white/[0.02]">Menu Highlights</a>
               <a href="#events" onClick={(e) => { setMobileMenuOpen(false); handleScrollTo(e, "events"); }} className="hover:text-[#C5A85C] py-1 border-b border-white/[0.02]">Upcoming Performances</a>
@@ -470,7 +470,7 @@ export default function App() {
                 id="hero-reserve-btn"
                 href="#reservations"
                 onClick={(e) => handleScrollTo(e, "reservations")}
-                className="w-full sm:w-auto px-8 py-3.5 bg-[#C5A85C] text-black font-mono text-[11px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-white hover:text-black transition-all duration-300 text-center shadow-lg cursor-pointer"
+                className="w-full sm:w-auto px-8 py-3.5 bg-[#C5A85C] text-black font-mono text-xs font-semibold font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-white hover:text-black transition-all duration-300 text-center shadow-lg cursor-pointer"
               >
                 Reserve a Table
               </a>
@@ -478,7 +478,7 @@ export default function App() {
                 id="hero-menu-btn"
                 href="#menu"
                 onClick={(e) => handleScrollTo(e, "menu")}
-                className="w-full sm:w-auto px-8 py-3.5 border border-white/10 text-white font-mono text-[11px] font-semibold uppercase tracking-[0.2em] rounded-sm hover:border-[#C5A85C] hover:bg-white/[0.01] transition-all duration-300 text-center cursor-pointer"
+                className="w-full sm:w-auto px-8 py-3.5 border border-white/10 text-white font-mono text-xs font-semibold font-semibold uppercase tracking-[0.2em] rounded-sm hover:border-[#C5A85C] hover:bg-white/[0.01] transition-all duration-300 text-center cursor-pointer"
               >
                 Menu Highlights
               </a>
@@ -517,7 +517,7 @@ export default function App() {
                   "We pair the beautiful ambiance of live performance with highly curated, focused dining."
                 </p>
                 <div className="pt-2 border-t border-white/[0.05]">
-                  <h5 className="text-[10px] font-mono font-bold text-white uppercase">{brandData.brandStory.chefName}</h5>
+                  <h5 className="text-xs font-semibold tracking-wider font-mono font-bold text-white uppercase">{brandData.brandStory.chefName}</h5>
                   <span className="text-[8px] text-stone-400 font-sans block mt-0.5">{brandData.brandStory.chefRole}</span>
                 </div>
               </div>
@@ -533,7 +533,7 @@ export default function App() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white font-serif uppercase leading-tight">
                   {brandData.brandStory.title}
                 </h2>
-                <p className="text-xs sm:text-sm md:text-base text-stone-400 font-mono tracking-wider italic">
+                <p className="text-base font-semibold md:text-base text-stone-400 font-mono tracking-wider italic">
                   {brandData.brandStory.subtitle}
                 </p>
               </div>
@@ -703,7 +703,7 @@ export default function App() {
                                 <Sparkles className="w-3.5 h-3.5 text-[#C5A85C] shrink-0" />
                                 Interactive Pairing
                               </span>
-                              <p className="text-[11px] text-stone-300 font-sans italic font-light leading-relaxed">
+                              <p className="text-xs font-semibold text-stone-300 font-sans italic font-light leading-relaxed">
                                 {pairingNotes[item.id] || "Best complemented by our vintage red wines or a classic bourbon old fashioned."}
                               </p>
                             </motion.div>
@@ -747,7 +747,7 @@ export default function App() {
               Upcoming Performances
             </h2>
             <div className="w-12 h-[1px] bg-[#C5A85C]/35 mx-auto my-3" />
-            <p className="text-xs sm:text-sm text-stone-400 font-sans font-light leading-relaxed max-w-lg mx-auto">
+            <p className="text-base font-semibold text-stone-400 font-sans font-light leading-relaxed max-w-lg mx-auto">
               Dining reservations generally include access to our scheduled live performances. Table bookings are highly recommended.
             </p>
           </div>
@@ -788,10 +788,10 @@ export default function App() {
                       Live Room
                     </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-stone-350 font-sans font-light leading-relaxed max-w-lg">
+                  <p className="text-base font-semibold text-stone-350 font-sans font-light leading-relaxed max-w-lg">
                     {event.description}
                   </p>
-                  <p className="text-[10px] font-mono text-stone-450 uppercase tracking-[0.15em] pt-1">
+                  <p className="text-xs font-semibold tracking-wider font-mono text-stone-450 uppercase tracking-[0.15em] pt-1">
                     Featured Quartet: <strong className="text-[#C5A85C] font-semibold">{event.artist}</strong>
                   </p>
                 </div>
@@ -805,7 +805,7 @@ export default function App() {
                   
                   <a 
                     href="#reservations"
-                    className="px-4.5 py-2.5 border border-[#C5A85C]/35 text-[#C5A85C] hover:bg-[#C5A85C] hover:text-black text-[10px] tracking-[0.15em] uppercase font-mono font-medium rounded-sm transition-all duration-300 backdrop-blur-sm"
+                    className="px-4.5 py-2.5 border border-[#C5A85C]/35 text-[#C5A85C] hover:bg-[#C5A85C] hover:text-black text-xs font-semibold tracking-wider tracking-[0.15em] uppercase font-mono font-medium rounded-sm transition-all duration-300 backdrop-blur-sm"
                   >
                     Book a Table
                   </a>
@@ -845,7 +845,7 @@ export default function App() {
                 From intimate seated dinners to exclusive full venue buyouts, we tailor every detail—from the menus to the atmosphere—to suit your occasion beautifully.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm font-light font-sans text-stone-300 pt-2">
+              <div className="grid sm:grid-cols-2 gap-4 text-base font-semibold font-light font-sans text-stone-300 pt-2">
                 <div className="flex items-center gap-2.5">
                   <CheckCircle className="w-3.5 h-3.5 text-[#C5A85C] shrink-0" />
                   <span>Accommodations for 10 to 120 guests</span>
@@ -901,7 +901,7 @@ export default function App() {
                 <p className="text-xs sm:text-[13px] text-stone-350 leading-relaxed font-light">
                   Ideal for standing receptions, mixers, and social gatherings. Includes curated hors d'oeuvres and a tailored beverage menu matched to your preferences.
                 </p>
-                <ul className="text-[11px] font-sans text-stone-400 space-y-1.5 pt-3.5 border-t border-white/[0.05] font-light list-none">
+                <ul className="text-xs font-semibold font-sans text-stone-400 space-y-1.5 pt-3.5 border-t border-white/[0.05] font-light list-none">
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Custom beverage packages and premium spirits curation</span></li>
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Curated selections of hot and cold savory small bites</span></li>
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Standard lighting control and simple sound custom configurations</span></li>
@@ -909,7 +909,7 @@ export default function App() {
               </div>
               <div className="pt-4 border-t border-white/[0.06] mt-6 flex items-center justify-between font-mono">
                 <span className="text-[8px] sm:text-[9px] text-stone-500 uppercase tracking-wider">Food & Beverage Minimum</span>
-                <span className="text-xs sm:text-sm font-semibold text-[#C5A85C] tracking-wide">$2,500+</span>
+                <span className="text-base font-semibold font-semibold text-[#C5A85C] tracking-wide">$2,500+</span>
               </div>
             </div>
 
@@ -926,7 +926,7 @@ export default function App() {
                 <p className="text-xs sm:text-[13px] text-stone-350 leading-relaxed font-light">
                   A refined multi-course dining experience structured for smaller groups. Features a custom tasting menu paired with select bottles from our curated selection.
                 </p>
-                <ul className="text-[11px] font-sans text-stone-400 space-y-1.5 pt-3.5 border-t border-white/[0.05] font-light list-none">
+                <ul className="text-xs font-semibold font-sans text-stone-400 space-y-1.5 pt-3.5 border-t border-white/[0.05] font-light list-none">
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Custom three or five-course group dining menus</span></li>
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Expert wine pairings selected beautifully to match each course</span></li>
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Dedicated waitstaff service and personalized menus</span></li>
@@ -934,7 +934,7 @@ export default function App() {
               </div>
               <div className="pt-4 border-t border-white/[0.06] mt-6 flex items-center justify-between font-mono">
                 <span className="text-[8px] sm:text-[9px] text-stone-500 uppercase tracking-wider">Food & Beverage Minimum</span>
-                <span className="text-xs sm:text-sm font-semibold text-[#C5A85C] tracking-wide">$3,800+</span>
+                <span className="text-base font-semibold font-semibold text-[#C5A85C] tracking-wide">$3,800+</span>
               </div>
             </div>
 
@@ -954,7 +954,7 @@ export default function App() {
                 <p className="text-xs sm:text-[13px] text-stone-350 leading-relaxed font-light">
                   Exclusive access to the entire venue for larger gatherings, private receptions, and premium milestone events.
                 </p>
-                <ul className="text-[11px] font-sans text-stone-400 space-y-1.5 pt-3.5 border-t border-white/[0.05] font-light list-none">
+                <ul className="text-xs font-semibold font-sans text-stone-400 space-y-1.5 pt-3.5 border-t border-white/[0.05] font-light list-none">
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Private venue access with custom security and bartenders</span></li>
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Fully customizable seating layouts and sound staging</span></li>
                   <li className="flex items-start gap-2"><span className="text-[#C5A85C] mt-0.5">•</span> <span>Tailored dining, custom catering themes, and wine selection curation</span></li>
@@ -962,7 +962,7 @@ export default function App() {
               </div>
               <div className="pt-4 border-t border-white/[0.06] mt-6 flex items-center justify-between font-mono">
                 <span className="text-[8px] sm:text-[9px] text-stone-500 uppercase tracking-wider">Food & Beverage Minimum</span>
-                <span className="text-xs sm:text-sm font-semibold text-[#C5A85C] tracking-wide">$7,500+</span>
+                <span className="text-base font-semibold font-semibold text-[#C5A85C] tracking-wide">$7,500+</span>
               </div>
             </div>
 
@@ -1023,7 +1023,7 @@ export default function App() {
                         </span>
                       </div>
 
-                      <p className="text-xs sm:text-sm md:text-base text-stone-250 font-sans leading-relaxed italic font-light opacity-95">
+                      <p className="text-base font-semibold md:text-base text-stone-250 font-sans leading-relaxed italic font-light opacity-95">
                         "{reviewsList[currentReviewIndex].quote}"
                       </p>
                     </div>
@@ -1160,7 +1160,7 @@ export default function App() {
                     <div className="pt-2">
                       <button 
                         type="submit"
-                        className="w-full py-3 bg-[#C5A85C] hover:bg-white text-black font-mono font-bold tracking-[0.2em] text-[10px] uppercase rounded-sm cursor-pointer transition-all duration-300 border border-[#C5A85C]"
+                        className="w-full py-3 bg-[#C5A85C] hover:bg-white text-black font-mono font-bold tracking-[0.2em] text-base font-semibold min-h-[44px] font-semibold tracking-wider uppercase rounded-sm cursor-pointer transition-all duration-300 border border-[#C5A85C]"
                       >
                         Publish Review
                       </button>
@@ -1181,7 +1181,7 @@ export default function App() {
                       <h4 className="text-sm font-semibold text-white uppercase tracking-wider font-serif">
                         Review Received
                       </h4>
-                      <p className="text-[11px] text-stone-400 font-sans leading-relaxed px-4 font-light">
+                      <p className="text-xs font-semibold text-stone-400 font-sans leading-relaxed px-4 font-light">
                         Thank you for your warm words. Your experience has been beautifully preserved in our guest book in real-time.
                       </p>
                     </div>
@@ -1207,7 +1207,7 @@ export default function App() {
               Reserve a Table
             </h2>
             <div className="w-12 h-[1px] bg-[#C5A85C]/25 mx-auto my-3" />
-            <p className="text-xs sm:text-sm text-stone-400 font-sans max-w-md mx-auto font-light leading-relaxed">
+            <p className="text-base font-semibold text-stone-400 font-sans max-w-md mx-auto font-light leading-relaxed">
               Reservations are highly recommended to secure seating. For parties larger than eight guests, please contact us directly.
             </p>
           </div>
@@ -1234,9 +1234,9 @@ export default function App() {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.6)]"></span>
                       </span>
-                      <span className="text-[10px] font-mono uppercase tracking-[0.15em] text-[#C5A85C] font-semibold">Live Availability</span>
+                      <span className="text-xs font-semibold tracking-wider font-mono uppercase tracking-[0.15em] text-[#C5A85C] font-semibold">Live Availability</span>
                     </div>
-                    <span className="text-[11px] font-sans text-stone-300 font-light tracking-wide text-right">
+                    <span className="text-xs font-semibold font-sans text-stone-300 font-light tracking-wide text-right">
                       {getAvailabilityText()}
                     </span>
                   </div>
@@ -1372,7 +1372,7 @@ export default function App() {
                   <div className="pt-2 space-y-3">
                     <button 
                       type="submit"
-                      className="w-full py-3.5 bg-[#C5A85C] hover:bg-white text-black font-mono font-bold tracking-[0.2em] text-[11px] uppercase rounded-sm cursor-pointer transition-all duration-300 text-center border border-[#C5A85C]"
+                      className="w-full py-3.5 bg-[#C5A85C] hover:bg-white text-black font-mono font-bold tracking-[0.2em] text-base font-semibold min-h-[44px] font-semibold uppercase rounded-sm cursor-pointer transition-all duration-300 text-center border border-[#C5A85C]"
                     >
                       Confirm Reservation
                     </button>
@@ -1404,7 +1404,7 @@ export default function App() {
                   </div>
 
                   {/* Clean Elegant Confirmation block - no funny vouchers */}
-                  <div className="bg-black/40 border border-white/[0.06] p-6 rounded-sm text-left space-y-4 font-mono text-[11px] relative shadow-xl">
+                  <div className="bg-black/40 border border-white/[0.06] p-6 rounded-sm text-left space-y-4 font-mono text-xs font-semibold relative shadow-xl">
                     <div className="absolute inset-x-0 top-0 h-[2px] bg-[#C5A85C]" />
                     
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center text-[9px] text-[#C5A85C] pb-2 border-b border-white/[0.04] uppercase font-semibold gap-2">
@@ -1557,7 +1557,7 @@ export default function App() {
           <span className="text-[9px] font-mono tracking-[0.3em] text-[#C5A85C] uppercase bg-[#C5A85C]/[0.04] px-3.5 py-1 rounded-sm inline-block mb-4 border border-[#C5A85C]/15">
             Gallery
           </span>
-          <p className="text-xs sm:text-sm text-stone-400 font-sans max-w-md mx-auto mb-10 leading-relaxed font-light">
+          <p className="text-base font-semibold text-stone-400 font-sans max-w-md mx-auto mb-10 leading-relaxed font-light">
             A glimpse inside our spaces, live evening sets, and signature plates. Follow us on Instagram at <strong className="text-stone-200">{brandData.contact.instagram}</strong>.
           </p>
 
@@ -1586,7 +1586,7 @@ export default function App() {
                   <span className="text-[7px] font-mono uppercase tracking-widest text-[#C5A85C] block">
                     {img.cat}
                   </span>
-                  <span className="text-[10px] font-sans text-white font-light mt-0.5 block truncate lines-1">
+                  <span className="text-xs font-semibold tracking-wider font-sans text-white font-light mt-0.5 block truncate lines-1">
                     {img.label}
                   </span>
                 </div>
@@ -1673,7 +1673,7 @@ export default function App() {
             <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-white uppercase font-serif">
               Join Our Circle
             </h2>
-            <p className="text-xs sm:text-sm text-stone-400 font-sans max-w-md mx-auto font-light leading-relaxed">
+            <p className="text-base font-semibold text-stone-400 font-sans max-w-md mx-auto font-light leading-relaxed">
               Receive private invitations to exclusive curated wine dinners, off-menu seasonal releases, and early access reservation schedules.
             </p>
           </div>
@@ -1698,7 +1698,7 @@ export default function App() {
                 />
                 <button 
                   type="submit"
-                  className="w-full sm:w-auto px-8 py-3 bg-[#C5A85C] hover:bg-white text-black font-mono font-bold tracking-[0.2em] text-[10px] uppercase rounded-sm cursor-pointer transition-all duration-300 border border-[#C5A85C] shrink-0"
+                  className="w-full sm:w-auto px-8 py-3 bg-[#C5A85C] hover:bg-white text-black font-mono font-bold tracking-[0.2em] text-base font-semibold min-h-[44px] font-semibold tracking-wider uppercase rounded-sm cursor-pointer transition-all duration-300 border border-[#C5A85C] shrink-0"
                 >
                   Subscribe
                 </button>
@@ -1714,8 +1714,8 @@ export default function App() {
                   <Check className="w-4 h-4" />
                 </div>
                 <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider mb-1">Subscription Confirmed</h4>
-                <p className="text-[11px] text-stone-400 font-sans font-light leading-normal">
-                  Thank you. An invitation to our inner circle has been dispatched to <strong className="text-stone-300 font-mono text-[10px]">{subscribedEmail}</strong>.
+                <p className="text-xs font-semibold text-stone-400 font-sans font-light leading-normal">
+                  Thank you. An invitation to our inner circle has been dispatched to <strong className="text-stone-300 font-mono text-xs font-semibold tracking-wider">{subscribedEmail}</strong>.
                 </p>
               </motion.div>
             )}
@@ -1734,7 +1734,7 @@ export default function App() {
               <span className="text-md font-bold tracking-[0.25em] text-white uppercase font-serif block">
                 {brandData.name}
               </span>
-              <p className="text-[11px] leading-relaxed text-stone-400 font-light max-w-xs">
+              <p className="text-xs font-semibold leading-relaxed text-stone-400 font-light max-w-xs">
                 {brandData.description}
               </p>
               <div className="flex gap-4 pt-1">
@@ -1747,7 +1747,7 @@ export default function App() {
             {/* Coordinates column */}
             <div className="space-y-2">
               <h5 className="text-[9px] font-mono text-white tracking-widest uppercase font-semibold">Location</h5>
-              <div className="space-y-1 font-light text-stone-400 text-[11px]">
+              <div className="space-y-1 font-light text-stone-400 text-xs font-semibold">
                 <p className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 text-[#C5A85C] shrink-0 mt-0.5" />
                   <span>{brandData.contact.address}<br />{brandData.contact.cityState}</span>
@@ -1762,7 +1762,7 @@ export default function App() {
             {/* Hours column */}
             <div className="space-y-2">
               <h5 className="text-[9px] font-mono text-white tracking-widest uppercase font-semibold">Hours</h5>
-              <div className="space-y-1.5 font-light text-stone-400 text-[11px] font-mono">
+              <div className="space-y-1.5 font-light text-stone-400 text-xs font-semibold font-mono">
                 <p className="flex justify-between">
                   <span>Mon — Wed</span>
                   <span>{brandData.contact.hours.weekdays}</span>
@@ -1934,7 +1934,7 @@ export default function App() {
 
               <form onSubmit={handleAdminUnlock} className="space-y-4">
                 <div>
-                  <label className="block text-[11px] font-mono text-stone-300 uppercase tracking-wider mb-2">
+                  <label className="block text-sm font-semibold font-mono text-stone-300 uppercase tracking-wider mb-2">
                     Enter VIP Access Passkey
                   </label>
                   <input
@@ -1947,7 +1947,7 @@ export default function App() {
                   />
                 </div>
 
-                <div className="p-3 bg-black/40 rounded border border-stone-800 font-mono text-[11px]">
+                <div className="p-3 bg-black/40 rounded border border-stone-800 font-mono text-xs font-semibold">
                   <div className="text-stone-400 mb-1 flex items-center justify-between">
                     <span>DEMO CHEAT CODE:</span>
                     <span className="text-stone-500">(1-Click Fill)</span>
@@ -1958,14 +1958,14 @@ export default function App() {
                     className="w-full py-1.5 px-2 bg-[#C5A85C]/10 hover:bg-[#C5A85C]/20 border border-[#C5A85C]/30 rounded text-[#C5A85C] font-bold text-left flex items-center justify-between"
                   >
                     <span>velvet2026</span>
-                    <span className="text-[10px] uppercase underline">AUTO-FILL</span>
+                    <span className="text-xs font-semibold tracking-wider uppercase underline">AUTO-FILL</span>
                   </button>
                 </div>
 
                 <div className="flex items-center gap-3 pt-2 font-mono">
                   <button
                     type="submit"
-                    className="flex-1 py-2.5 bg-[#C5A85C] hover:bg-[#B3954B] text-black font-bold text-xs uppercase tracking-wider rounded-sm transition-colors"
+                    className="flex-1 py-2.5 bg-[#C5A85C] hover:bg-[#B3954B] text-black font-bold text-base font-semibold min-h-[44px] uppercase tracking-wider rounded-sm transition-colors"
                   >
                     Authorize Session
                   </button>

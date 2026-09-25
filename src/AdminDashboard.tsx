@@ -169,7 +169,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-lg font-bold tracking-[0.2em] uppercase font-serif text-white">THE VELVET NOTE</h1>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#C5A85C]/20 text-[#C5A85C] border border-[#C5A85C]/30 font-bold">
+                <span className="text-xs font-semibold tracking-wider font-mono px-2 py-0.5 rounded bg-[#C5A85C]/20 text-[#C5A85C] border border-[#C5A85C]/30 font-bold">
                   SOMMELIER & VIP MAÎTRE D'
                 </span>
               </div>
@@ -184,7 +184,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
             </div>
             <button
               onClick={onExit}
-              className="flex items-center gap-2 px-4 py-2 rounded-sm border border-stone-700 bg-stone-900/60 hover:bg-[#C5A85C] hover:text-black hover:border-[#C5A85C] text-xs font-mono tracking-wider transition-all duration-200"
+              className="flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-sm border border-stone-700 bg-stone-900/60 hover:bg-[#C5A85C] hover:text-black hover:border-[#C5A85C] text-base font-semibold min-h-[44px] font-mono tracking-wider transition-all duration-200"
             >
               <LogOut className="w-4 h-4" />
               <span>RETURN TO GUEST EXPERIENCE</span>
@@ -203,7 +203,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
               <DollarSign className="w-4 h-4 text-[#C5A85C]" />
             </div>
             <div className="text-2xl font-bold font-mono text-white">${totalCommitted.toLocaleString()}</div>
-            <div className="text-[11px] font-mono text-emerald-400 mt-1 flex items-center gap-1">
+            <div className="text-xs font-semibold font-mono text-emerald-400 mt-1 flex items-center gap-1">
               <TrendingUp className="w-3 h-3" />
               <span>+34% vs prior evening</span>
             </div>
@@ -215,7 +215,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
               <Wine className="w-4 h-4 text-[#C5A85C]" />
             </div>
             <div className="text-2xl font-bold font-mono text-[#C5A85C]">${totalLockerDues.toLocaleString()}<span className="text-xs text-stone-400 font-normal">/yr</span></div>
-            <div className="text-[11px] font-mono text-stone-400 mt-1">4 of 4 VIP Lockers Sealed</div>
+            <div className="text-xs font-semibold font-mono text-stone-400 mt-1">4 of 4 VIP Lockers Sealed</div>
           </div>
 
           <div className="p-5 rounded-sm bg-[#0E0C12] border border-stone-800 relative overflow-hidden">
@@ -224,7 +224,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
               <Music className="w-4 h-4 text-[#C5A85C]" />
             </div>
             <div className="text-2xl font-bold font-mono text-white">100%</div>
-            <div className="text-[11px] font-mono text-amber-400 mt-1">Sold out for late quintet session</div>
+            <div className="text-xs font-semibold font-mono text-amber-400 mt-1">Sold out for late quintet session</div>
           </div>
 
           <div className="p-5 rounded-sm bg-[#0E0C12] border border-stone-800 relative overflow-hidden">
@@ -233,7 +233,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
             </div>
             <div className="text-2xl font-bold font-mono text-emerald-400">ACTIVE</div>
-            <div className="text-[11px] font-mono text-stone-400 mt-1">RLS Protected · Supabase 2.4</div>
+            <div className="text-xs font-semibold font-mono text-stone-400 mt-1">RLS Protected · Supabase 2.4</div>
           </div>
         </div>
 
@@ -292,7 +292,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                   <button
                     key={s}
                     onClick={() => setFilterStatus(s)}
-                    className={`px-2.5 py-1 rounded text-[11px] border ${
+                    className={`px-2.5 py-1 rounded text-xs font-semibold border ${
                       filterStatus === s
                         ? 'border-[#C5A85C] bg-[#C5A85C]/10 text-[#C5A85C]'
                         : 'border-stone-800 text-stone-400 hover:text-white'
@@ -306,7 +306,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
 
             <div className="overflow-x-auto rounded-sm border border-stone-800 bg-[#0E0C12]">
               <table className="w-full text-left font-mono text-xs">
-                <thead className="bg-black/60 text-stone-400 border-b border-stone-800 uppercase tracking-wider text-[11px]">
+                <thead className="bg-black/60 text-stone-400 border-b border-stone-800 uppercase tracking-wider text-xs font-semibold">
                   <tr>
                     <th className="py-3 px-4">Pass & Code</th>
                     <th className="py-3 px-4">Guest & Tier</th>
@@ -321,25 +321,25 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                     <tr key={res.id} className="hover:bg-white/[0.02] transition-colors">
                       <td className="py-3 px-4">
                         <div className="font-bold text-[#C5A85C]">{res.resCode}</div>
-                        <div className="text-[10px] text-stone-500">{res.id}</div>
+                        <div className="text-xs font-semibold tracking-wider text-stone-500">{res.id}</div>
                       </td>
                       <td className="py-3 px-4">
                         <div className="font-semibold text-white">{res.guestName}</div>
-                        <div className="text-[10px] text-stone-400">{res.tier} · Party of {res.partySize}</div>
+                        <div className="text-xs font-semibold tracking-wider text-stone-400">{res.tier} · Party of {res.partySize}</div>
                       </td>
                       <td className="py-3 px-4">
                         <div className="text-stone-200">{res.table}</div>
-                        <div className="text-[10px] text-stone-500">{res.timeSlot}</div>
+                        <div className="text-xs font-semibold tracking-wider text-stone-500">{res.timeSlot}</div>
                       </td>
                       <td className="py-3 px-4">
-                        <div className="text-stone-300 text-[11px] max-w-xs">{res.cellarRequest}</div>
+                        <div className="text-stone-300 text-xs font-semibold max-w-xs">{res.cellarRequest}</div>
                       </td>
                       <td className="py-3 px-4 font-bold text-white">
                         ${res.spendCommitment.toLocaleString()}
                       </td>
                       <td className="py-3 px-4">
                         <div className="flex items-center gap-2">
-                          <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
+                          <span className={`px-2 py-0.5 rounded text-xs font-semibold tracking-wider font-bold uppercase ${
                             res.status === 'Bottles Pre-Poured' ? 'bg-purple-900/40 text-purple-300 border border-purple-800' :
                             res.status === 'Confirmed' ? 'bg-amber-900/40 text-amber-300 border border-amber-800' :
                             res.status === 'Seated' ? 'bg-emerald-900/40 text-emerald-300 border border-emerald-800' :
@@ -350,7 +350,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                           <select
                             value={res.status}
                             onChange={(e) => handleUpdateStatus(res.id, e.target.value as VIPReservation['status'])}
-                            className="bg-black border border-stone-700 text-stone-300 rounded px-1.5 py-0.5 text-[10px] focus:outline-none focus:border-[#C5A85C]"
+                            className="bg-black border border-stone-700 text-stone-300 rounded px-1.5 py-0.5 text-xs font-semibold tracking-wider focus:outline-none focus:border-[#C5A85C]"
                           >
                             <option value="Confirmed">Mark Confirmed</option>
                             <option value="Bottles Pre-Poured">Pre-Pour Bottles</option>
@@ -377,7 +377,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                     <div className="flex items-center gap-2">
                       <Lock className="w-4 h-4 text-[#C5A85C]" />
                       <span className="font-mono font-bold text-white text-sm">{locker.lockerId}</span>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-[#C5A85C] border border-[#C5A85C]/30">
+                      <span className="text-xs font-semibold tracking-wider font-mono px-2 py-0.5 rounded bg-black/60 text-[#C5A85C] border border-[#C5A85C]/30">
                         {locker.tier}
                       </span>
                     </div>
@@ -392,7 +392,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                   </div>
 
                   <div className="p-3 bg-black/50 border border-stone-800/80 rounded-sm mb-4 font-mono text-xs">
-                    <div className="text-[10px] text-stone-500 uppercase tracking-wider mb-1">Featured Reserve Vintage:</div>
+                    <div className="text-xs font-semibold tracking-wider text-stone-500 uppercase tracking-wider mb-1">Featured Reserve Vintage:</div>
                     <div className="text-[#C5A85C] font-semibold">{locker.featuredVintage}</div>
                   </div>
                 </div>
@@ -402,7 +402,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                     <span className="text-stone-500">Annual Locker Dues: </span>
                     <strong className="text-white">${locker.annualDues.toLocaleString()}/yr</strong>
                   </div>
-                  <button className="text-[11px] text-[#C5A85C] hover:underline flex items-center gap-1 font-bold">
+                  <button className="text-base font-semibold min-h-[44px] font-semibold text-[#C5A85C] hover:underline flex items-center gap-1 font-bold">
                     <span>Manage Cellar</span>
                     <ArrowRight className="w-3 h-3" />
                   </button>
@@ -424,17 +424,17 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                 <div className="p-4 bg-black/60 rounded border border-stone-800">
                   <div className="text-stone-500 mb-1">Cover & Table Revenue</div>
                   <div className="text-2xl font-bold text-white">$64,800</div>
-                  <div className="text-stone-400 text-[11px] mt-1">28 nights @ 98% occupancy</div>
+                  <div className="text-stone-400 text-xs font-semibold mt-1">28 nights @ 98% occupancy</div>
                 </div>
                 <div className="p-4 bg-black/60 rounded border border-stone-800">
                   <div className="text-stone-500 mb-1">Cellar Bottle Locker Dues</div>
                   <div className="text-2xl font-bold text-[#C5A85C]">$54,500</div>
-                  <div className="text-stone-400 text-[11px] mt-1">4 corporate private vaults</div>
+                  <div className="text-stone-400 text-xs font-semibold mt-1">4 corporate private vaults</div>
                 </div>
                 <div className="p-4 bg-black/60 rounded border border-stone-800">
                   <div className="text-stone-500 mb-1">Craft Cocktail Flights</div>
                   <div className="text-2xl font-bold text-emerald-400">$38,200</div>
-                  <div className="text-stone-400 text-[11px] mt-1">Average $165 ticket size</div>
+                  <div className="text-stone-400 text-xs font-semibold mt-1">Average $165 ticket size</div>
                 </div>
               </div>
             </div>
